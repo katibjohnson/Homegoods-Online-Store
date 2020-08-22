@@ -138,7 +138,7 @@ createProductCard();
 //button showing and hidiing shopping cart
 let shoppingCart = document.querySelector(".shopping-cart");
 
-let shoppingCartShow = document.querySelector(".cartButton");
+let shoppingCartShow = document.querySelector(".shopping-cart-button");
 shoppingCartShow.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("hi");
