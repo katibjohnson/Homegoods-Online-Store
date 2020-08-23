@@ -4,8 +4,7 @@ let products = [
   {
     name: "Ikat Bowls (Set of 3)",
     category: "Kitchenware",
-    description:
-      "Set of 3 handmade glazed earthenware bowls featuring a bold ikat print.",
+    description: "Handmade glazed earthenware bowls featuring an ikat print.",
     price: 48,
     src: "product_images/bowls.jpg",
   },
@@ -20,15 +19,14 @@ let products = [
     name: "Chartreuse Tea Kettle",
     category: "Kitchenware",
     description:
-      "Tea kettle with smooth glossy enamel finish and black bamboo handle.",
+      "Tea kettle with smooth glossy enamel finish and black handle.",
     price: 60,
     src: "product_images/kettle.jpg",
   },
   {
     name: "Le Creuset Saucepan",
     category: "Kitchenware",
-    description:
-      "Cast iron sauce pan coated in chip resistant red enamel and nonstick interior.",
+    description: "Cast iron sauce pan coated in chip resistant red enamel.",
     price: 190,
     src: "product_images/pan.jpg",
   },
@@ -58,7 +56,7 @@ let products = [
     name: "Bedding Set",
     category: "Home goods",
     description:
-      "Collection of fine cotton bedding featuring mixed graphic pillows and a linen duvet.",
+      "Collection of bedding featuring graphic pillows and a linen duvet.",
     price: 200,
     src: "product_images/bed.jpg",
   },
@@ -106,19 +104,19 @@ const createProductCard = () => {
     productImage.classList.add("image");
     productImage.setAttribute("src", product.src);
     let productName = document.createElement("h2");
-    productName.classList.add("product");
+    productName.classList.add("product-name", "content1");
     productName.innerText = product.name;
     let productDescription = document.createElement("p");
-    productDescription.classList.add("product", "desc", "info");
+    productDescription.classList.add("product-desc", "content1");
     productDescription.innerText = product.description;
     let productPrice = document.createElement("p");
-    productPrice.classList.add("product", "price", "info");
+    productPrice.classList.add("product-price", "content1");
     productPrice.innerText = `$${product.price}`;
     let productCategory = document.createElement("p");
-    productCategory.classList.add("product", "category", "info");
+    productCategory.classList.add("product-category", "content1");
     productCategory.innerText = product.category;
     let addCartButton = document.createElement("button");
-    addCartButton.classList.add("add-cart");
+    addCartButton.classList.add("button", "content1");
     addCartButton.innerText = "Add to cart";
     addCartButton.setAttribute("data-index", index);
     card.append(
