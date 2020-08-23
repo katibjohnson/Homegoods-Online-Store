@@ -17,7 +17,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   background-color: #edf1e1;
 }
 
@@ -32,7 +32,8 @@ a {
   top: 0;
   width: 100%;
   position: fixed;
-  background-color: black;
+  background-color: white;
+  border-bottom: 4px solid #943669;
 }
 
 .header-img {
@@ -40,18 +41,23 @@ a {
   top: 0;
   width: 100%;
   background-image: url("product_images/header.png");
-  opacity: 0.7;
+  opacity: 0.6;
   background-size: cover;
   position: fixed;
   z-index: 2;
 }
 
 .company-name {
-  color: white;
+  color: transparent;
+  background: #000000;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.349);
   position: fixed;
   font-family: lemonMilk;
   white-space: nowrap;
-  font-size: 7vw;
+  font-size: 8vw;
   z-index: 3;
   left: 50%;
   transform: translateX(-50%);
@@ -59,10 +65,13 @@ a {
 
 .fa-shopping-cart {
   position: absolute;
-  color: white;
-  top: 10%;
-  right: 5%;
   font-size: 5vw;
+  color: transparent;
+  background: #000000;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.349);
 }
 
 .shopping-cart-button,
@@ -82,45 +91,44 @@ a {
 /* main product cards styling */
 
 .product-container {
-  margin: 15vw;
-  margin-top: 30vw;
+  margin: 30vw 5vw 5vw 5vw;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: auto auto;
 }
 
 .product-card {
-  margin-bottom: 6vw;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px #b8d8d8;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #9c9c9c;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.content1 {
-  margin: 0.5vw;
+  flex-wrap: nowrap;
 }
 
 .image {
-  max-width: 90%;
+  max-width: 80%;
+  margin-bottom: 5px;
 }
 
 .product-name {
   font-weight: 600;
-  font-size: 4vw;
+  /* font-size: 4vw; */
 }
 
 .product-category {
   font-weight: 200;
   font-style: italic;
-  font-size: 3vw;
+  /* font-size: 3vw; */
 }
 .product-desc {
   text-align: center;
   font-weight: 300;
-  font-size: 3vw;
+  /* font-size: 3vw;
   width: 90%;
-  margin: 5px 0px;
+  margin: 5px 0px; */
 }
 
 .product-price {
@@ -129,18 +137,20 @@ a {
 }
 
 .add-cart {
-  background-color: #fe5f55;
-  font-family: "Raleway", sans-serif;
-  font-size: 3vw;
+  background-color: rgb(63, 63, 63);
+  font-family: "Fira Sans Condensed", sans-serif;
+  /* font-size: 3vw; */
   color: white;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 0px 10px;
   border-style: none;
 }
-
+.content1 {
+  margin: 0.5vw;
+  font-size: 10px;
+}
 /* cart styling */
 
-.add-cart,
 .checkout-button,
 .finish {
   background-color: #fe5f55;

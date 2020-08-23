@@ -116,7 +116,7 @@ const createProductCard = () => {
     productCategory.classList.add("product-category", "content1");
     productCategory.innerText = product.category;
     let addCartButton = document.createElement("button");
-    addCartButton.classList.add("button", "content1");
+    addCartButton.classList.add("button", "content1", "add-cart");
     addCartButton.innerText = "Add to cart";
     addCartButton.setAttribute("data-index", index);
     card.append(
