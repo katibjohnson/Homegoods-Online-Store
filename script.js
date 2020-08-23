@@ -2,50 +2,6 @@
 
 let products = [
   {
-    name: "Ikat Bowls (Set of 3)",
-    category: "Kitchenware",
-    description: "Handmade glazed earthenware bowls featuring an ikat print.",
-    price: 48,
-    src: "product_images/bowls.jpg",
-  },
-  {
-    name: "Rainbow Whisk",
-    category: "Kitchenware",
-    description: "Matte silicone rainbow whisk with a stainless steel handle.",
-    price: 22,
-    src: "product_images/whisk.jpg",
-  },
-  {
-    name: "Chartreuse Tea Kettle",
-    category: "Kitchenware",
-    description:
-      "Tea kettle with smooth glossy enamel finish and black handle.",
-    price: 60,
-    src: "product_images/kettle.jpg",
-  },
-  {
-    name: "Le Creuset Saucepan",
-    category: "Kitchenware",
-    description: "Cast iron sauce pan coated in chip resistant red enamel.",
-    price: 190,
-    src: "product_images/pan.jpg",
-  },
-  {
-    name: "Clay Vase",
-    category: "Home goods",
-    description: "Classic bottle vase hand sculpted with natural clay.",
-    price: 30,
-    src: "product_images/pitcher.jpg",
-  },
-  {
-    name: "Panda Plant",
-    category: "Home goods",
-    description:
-      "Artificial Panda Plant succulent with a white stoneware planter.",
-    price: 50,
-    src: "product_images/plant.jpg",
-  },
-  {
     name: "Circle Mirror",
     category: "Furniture",
     description: "Circular glass mirror framed in carved suar wood.",
@@ -88,6 +44,50 @@ let products = [
     description: "Solid reclaimed wood coffee table with a natural finish.",
     price: 450,
     src: "product_images/coffeeTable.jpg",
+  },
+  {
+    name: "Ikat Bowls (Set of 3)",
+    category: "Kitchenware",
+    description: "Handmade glazed earthenware bowls featuring an ikat print.",
+    price: 48,
+    src: "product_images/bowls.jpg",
+  },
+  {
+    name: "Rainbow Whisk",
+    category: "Kitchenware",
+    description: "Matte silicone rainbow whisk with a stainless steel handle.",
+    price: 22,
+    src: "product_images/whisk.jpg",
+  },
+  {
+    name: "Chartreuse Tea Kettle",
+    category: "Kitchenware",
+    description:
+      "Tea kettle with smooth glossy enamel finish and black handle.",
+    price: 60,
+    src: "product_images/kettle.jpg",
+  },
+  {
+    name: "Le Creuset Saucepan",
+    category: "Kitchenware",
+    description: "Cast iron sauce pan coated in chip resistant red enamel.",
+    price: 190,
+    src: "product_images/pan.jpg",
+  },
+  {
+    name: "Clay Vase",
+    category: "Home goods",
+    description: "Classic bottle vase hand sculpted with natural clay.",
+    price: 30,
+    src: "product_images/pitcher.jpg",
+  },
+  {
+    name: "Panda Plant",
+    category: "Home goods",
+    description:
+      "Artificial Panda Plant succulent with a white stoneware planter.",
+    price: 50,
+    src: "product_images/plant.jpg",
   },
 ];
 
