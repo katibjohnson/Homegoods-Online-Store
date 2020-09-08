@@ -171,13 +171,13 @@ productContainer.addEventListener("click", (e) => {
       let card = document.createElement("div");
       card.classList.add("cart-product");
       let productImage = document.createElement("img");
-      productImage.classList.add("image", "image-cart");
+      productImage.classList.add("image-cart");
       productImage.setAttribute("src", product.src);
       let productName = document.createElement("h2");
-      productName.classList.add("product", "name");
+      productName.classList.add("cart-name");
       productName.innerText = product.name;
       let productPrice = document.createElement("p");
-      productPrice.classList.add("product", "price", "info");
+      productPrice.classList.add("cart-price");
       productPrice.innerText = `$${product.price}`;
       card.append(productImage, productName, productPrice);
       cartItems.append(card);
@@ -210,15 +210,15 @@ productContainer.addEventListener("click", (e) => {
     shoppingCartArray.forEach((product) => {
       total += product.price;
       let receiptCard = document.createElement("div");
-      receiptCard.classList.add("cart-product");
+      receiptCard.classList.add("receipt-product");
       let productImage = document.createElement("img");
-      productImage.classList.add("image", "image-cart");
+      productImage.classList.add("image-receipt");
       productImage.setAttribute("src", product.src);
       let productName = document.createElement("h2");
-      productName.classList.add("product", "name");
+      productName.classList.add("receipt-name");
       productName.innerText = product.name;
       let productPrice = document.createElement("p");
-      productPrice.classList.add("product", "price", "info");
+      productPrice.classList.add("receipt-price");
       productPrice.innerText = `$${product.price}`;
       receiptCard.append(productImage, productName, productPrice);
       receiptContent.append(receiptCard);

@@ -14,10 +14,15 @@
   font-style: italic;
 }
 
+body,
+button,
+input,
+label {
+  font-family: "Fira Sans Condensed", sans-serif;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: "Fira Sans Condensed", sans-serif;
   background-color: #edf1e1;
 }
 
@@ -154,7 +159,6 @@ a {
 .checkout-button,
 .finish {
   background-color: #fe5f55;
-  font-family: "Raleway", sans-serif;
   color: white;
   border-radius: 10px;
   padding: 10px;
@@ -231,67 +235,464 @@ input {
 }
 /* ---------------- */
 @media only screen and (min-width: 768px) {
+  .hide {
+    visibility: hidden;
+  }
   .header {
-    border-bottom: 5px solid;
-    border-color: #fe5f55;
+    height: 20vw;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    border-bottom: 4px solid #943669;
   }
 
-  .header-image {
-    height: 30vh;
-    object-fit: cover;
-  }
-  .product-container {
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: auto auto auto;
-  }
-
-  .main-content {
-    margin: 10px;
-    padding-top: 25%;
-    margin-left: 5%;
-    margin-right: 5%;
+  .header-img {
+    height: 20vw;
+    top: 0;
+    width: 100%;
+    background-image: url("product_images/header.png");
+    opacity: 0.6;
+    background-size: cover;
+    position: fixed;
+    z-index: 2;
   }
 
-  .header-title {
-    font-size: 3vw;
+  .company-name {
+    color: transparent;
+    background: #000000;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.349);
+    position: fixed;
+    font-family: lemonMilk;
+    white-space: nowrap;
+    font-size: 8vw;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
   }
 
   .fa-shopping-cart {
-    font-size: 3vw;
+    position: absolute;
+    font-size: 5vw;
+    color: transparent;
+    background: #000000;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.349);
   }
 
-  .inside-cart,
-  .formsContainer,
-  .receipt-content {
-    overflow-y: auto;
+  .shopping-cart-button,
+  .shopping-cart-button:active,
+  .shopping-cart-button:hover {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    top: 10%;
+    left: 90%;
+    z-index: 3;
+  }
+
+  /* main product cards styling */
+
+  .product-container {
+    margin: 22vw 5vw 5vw 5vw;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: auto auto;
+  }
+
+  .product-card {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #9c9c9c;
+    background-color: white;
     display: flex;
     flex-direction: column;
-
-    padding: 20px;
-    background-color: white;
-    width: 30vw;
-    height: 50vw;
-    border-radius: 15px;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
   .image {
     max-width: 100%;
-    height: auto;
   }
 
-  .image-cart {
-    width: 100px;
-    height: 100px;
-  }
-  .cardp,
-  .cashp,
-  .billing {
-    margin-bottom: 3px;
+  .product-name {
+    font-weight: 600;
+    font-size: 3vw;
   }
 
+  .product-category {
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2vw;
+  }
+  .product-desc {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2vw;
+    width: 90%;
+    margin: 5px 0px;
+  }
+
+  .product-price {
+    margin-bottom: 10px;
+    font-size: 2vw;
+  }
+
+  .add-cart {
+    background-color: rgb(63, 63, 63);
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 2vw;
+    color: white;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border-style: none;
+  }
+  .content1 {
+    margin: 0.5vw;
+  }
+  /* cart styling */
+
+  .finish {
+    background-color: #943669;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border-style: none;
+    margin-top: 10px;
+  }
+
+  .add-cart:focus,
+  .checkout-button:focus,
+  .finish:focus {
+    outline: 0;
+  }
   .cashcheckout {
     display: flex;
     flex-direction: column;
+  }
+
+  .add-cart:active,
+  .checkout-button:active,
+  .finish:active {
+    background-color: #7a9e9f;
+  }
+
+  .billing,
+  .payment {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+  }
+  /* ---------------- */
+
+  .shopping-cart,
+  .checkout-window,
+  .receipt {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inside-cart,
+  .forms-container {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px;
+  }
+  .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .cart-product {
+    width: 25vw;
+    margin: 5px 5px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #9c9c9c;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .image-cart {
+    max-width: 90%;
+    margin-bottom: 5px;
+  }
+  .cart-name {
+    font-weight: 600;
+    font-size: 2vw;
+  }
+
+  .cart-price {
+    margin-bottom: 10px;
+    font-size: 2vw;
+    margin: 0;
+  }
+
+  .add-cart {
+    background-color: rgb(63, 63, 63);
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 2vw;
+    color: white;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border-style: none;
+  }
+  .content1 {
+    margin: 0.5vw;
+  }
+
+  .subtotal {
+    font-weight: 600;
+    font-size: 2vw;
+    border-top: 3px black solid;
+    margin-top: 30px;
+  }
+  .checkout-button {
+    background-color: #943669;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border-style: none;
+    margin-top: 10px;
+    font-size: 2em;
+  }
+  .forms-container {
+    font-size: 2em;
+  }
+  .cash-input,
+  .card-input {
+    font-size: 1em;
+  }
+
+  .cash-finish,
+  .card-finish {
+    background-color: #943669;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border-style: none;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+  .receipt-content {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px;
+  }
+
+  .receipt-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .thank-you {
+    margin: 15px;
+    font-size: 2em;
+  }
+
+  .receipt-product {
+    width: 25vw;
+    margin: 5px 5px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #9c9c9c;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .image-receipt {
+    max-width: 90%;
+    margin-bottom: 5px;
+  }
+  .receipt-name {
+    font-weight: 600;
+    font-size: 2vw;
+  }
+
+  .receipt-price {
+    margin-bottom: 10px;
+    font-size: 2vw;
+    margin: 0;
+  }
+
+  .add-cart {
+    background-color: rgb(63, 63, 63);
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 2vw;
+    color: white;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border-style: none;
+  }
+  .content1 {
+    margin: 0.5vw;
+  }
+
+  .card-subtotal {
+    font-weight: 600;
+    font-size: 2em;
+    border-top: 3px black solid;
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .header {
+    height: 20vh;
+    top: 0;
+    width: 100vw;
+    position: fixed;
+    background-color: white;
+    border-bottom: 4px solid #943669;
+  }
+
+  .header-img {
+    height: 20vh;
+    top: 0;
+    width: 100vw;
+    background-image: url("product_images/header.png");
+    opacity: 0.6;
+    background-size: cover;
+    position: fixed;
+    z-index: 2;
+  }
+
+  .company-name {
+    color: transparent;
+    background: #000000;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.349);
+    position: fixed;
+    font-family: lemonMilk;
+    white-space: nowrap;
+    font-size: 6vw;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .fa-shopping-cart {
+    position: absolute;
+    font-size: 5vw;
+    color: transparent;
+    background: #000000;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.349);
+  }
+
+  .shopping-cart-button,
+  .shopping-cart-button:active,
+  .shopping-cart-button:hover {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    top: 10%;
+    left: 90%;
+    z-index: 3;
+  }
+  .product-container {
+    margin: 22vh 2vw 2vw 2vw;
+    width: 100vw;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .product-card {
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #9c9c9c;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 18vw;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .product-name {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .product-category {
+    font-weight: 200;
+    font-style: italic;
+    font-size: 15px;
+  }
+  .product-desc {
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+    width: 90%;
+    margin: 5px 0px;
+  }
+
+  .product-price {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .add-cart {
+    background-color: rgb(63, 63, 63);
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 15px;
+    color: white;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border-style: none;
+  }
+  .content1 {
+    margin: 0.5vw;
   }
 }
